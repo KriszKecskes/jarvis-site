@@ -1,0 +1,8 @@
+:root{--bg:#10141f;--fg:#e6ecf5;--muted:#9aa7bd;--accent:#4fd1e8}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px}
+header{display:flex;align-items:center;gap:16px}
+header img{width:72px;height:72px;border-radius:16px}
+h1{margin:0}h2{margin-top:2em}
+a{color:var(--accent)}.muted{color:var(--muted)}
+footer{margin-top:48px;color:var(--muted);font-size:14px}
