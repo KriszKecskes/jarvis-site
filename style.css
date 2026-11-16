@@ -1,8 +1,86 @@
-:root{--bg:#10141f;--fg:#e6ecf5;--muted:#9aa7bd;--accent:#4fd1e8}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}
-main{max-width:720px;margin:0 auto;padding:40px 16px}
-header{display:flex;align-items:center;gap:16px}
-header img{width:72px;height:72px;border-radius:16px}
-h1{margin:0}h2{margin-top:2em}
-a{color:var(--accent)}.muted{color:var(--muted)}
-footer{margin-top:48px;color:var(--muted);font-size:14px}
+/* A Jarvis app színei (crates/jarvis-web/static/style.css tokenjei): sötét alapból, világos a rendszer szerint */
+:root {
+  --bg: #0e1220; --bg-2: #121729; --panel: #171d31; --panel-2: #222a43; --line: #262f4a;
+  --text: #e9edf7; --muted: #98a2bb; --accent: #5b8cff; --accent-2: #38e1ff; --on-accent: #0e1220;
+  --ok: #5dd39e; --radius: 18px; --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --glow: radial-gradient(60% 50% at 50% 0%, rgba(91, 140, 255, 0.22), transparent 70%);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f6fb; --bg-2: #eef1f8; --panel: #ffffff; --panel-2: #e8ecf5; --line: #dde2ee;
+    --text: #141a28; --muted: #5a6378; --accent: #2f5fc8; --accent-2: #0b7c99; --on-accent: #ffffff;
+    --ok: #13804f; --shadow: 0 8px 30px rgba(20, 30, 60, 0.12);
+    --glow: radial-gradient(60% 50% at 50% 0%, rgba(47, 95, 200, 0.14), transparent 70%);
+    color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+code { font: 0.9em ui-monospace, "SF Mono", Menlo, Consolas, monospace; background: var(--panel-2); padding: 1px 6px; border-radius: 6px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--muted); }
+
+/* fejléc */
+.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 8px; }
+.top nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 15px; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--text); }
+.top .lang { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+@media (max-width: 560px) { .top nav .hide-s { display: none; } }
+
+/* hős */
+.hero { background: var(--glow); padding: 72px 0 40px; text-align: center; }
+.hero .mascot { width: 150px; height: auto; }
+.hero h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 8px 0 14px; letter-spacing: -0.02em; }
+.hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p.lead { max-width: 640px; margin: 0 auto 28px; font-size: 19px; color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--panel); }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { filter: brightness(1.08); }
+.shot { margin: 44px auto 0; max-width: 940px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel); }
+.shot img { display: block; width: 100%; }
+.shot img.light-only { display: none; }
+@media (prefers-color-scheme: light) { .shot img.dark-only { display: none; } .shot img.light-only { display: block; } }
+
+/* szekciók */
+section { padding: 64px 0; }
+section h2 { font-size: clamp(26px, 4vw, 36px); line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+section .sub { color: var(--muted); max-width: 640px; margin: 0 0 32px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.card .ico { font-size: 26px; line-height: 1; margin-bottom: 10px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.split { display: grid; gap: 32px; align-items: center; grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+.split .shot { margin: 0; }
+.alt { background: var(--bg-2); border-block: 1px solid var(--line); }
+.checks { list-style: none; padding: 0; margin: 16px 0 0; }
+.checks li { padding-left: 28px; position: relative; margin: 8px 0; }
+.checks li::before { content: "✓"; position: absolute; left: 0; color: var(--ok); font-weight: 700; }
+
+/* letöltő */
+.dl { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.dl .card { display: flex; flex-direction: column; gap: 10px; }
+.dl .card.me { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.dl .card .btn { justify-content: center; margin-top: auto; }
+.dl .card small { color: var(--muted); }
+.badge { align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--on-accent); background: var(--accent); border-radius: 999px; padding: 2px 10px; }
+.note { margin-top: 20px; color: var(--muted); font-size: 14px; }
+
+/* oldal alja, jogi oldal */
+footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.doc { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+.doc h1 { font-size: 34px; margin: 0 0 4px; }
+.doc h2 { margin-top: 2em; font-size: 22px; }
+.doc li { margin: 6px 0; }
