@@ -11,22 +11,24 @@
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <img class="mascot" src="img/mascot-idle.png" data-anim="img/mascot-idle" alt="" width="198" height="190">
+  <div class="orb"><img class="mascot" src="img/mascot-idle.png" data-anim="img/mascot-idle" alt="" width="198" height="190"></div>
+  <div class="hero-copy">
   <h1>Az asszisztensed,<br><span>a saját gépeiden.</span></h1>
   <p class="lead">A Jarvis szóban és írásban válaszol, intézi a naptáradat, figyeli a leveleidet és vezérli az otthonodat – és minden a te gépeiden marad. Nincs Jarvis-felhő, nincs fiók.</p>
   <div class="cta"><a class="btn primary" href="#download">Letöltés</a><a class="btn" href="#features">Funkciók</a></div>
+  </div>
   <div class="shot"><img class="dark-only" src="img/chat-dark.png" alt="A Jarvis chatablaka" width="1120" height="780"><img class="light-only" src="img/chat-light.png" alt="A Jarvis chatablaka" width="1120" height="780"></div>
 </div></div>
 
-<section id="features"><div class="wrap">
+<section id="features" class="feat"><div class="wrap">
   <h2>Minden, amit egy asszisztenstől vársz</h2><p class="sub">Egy app, ami beszél, cselekszik és emlékszik – a te kulcsaiddal és a te adataiddal.</p>
   <div class="grid">
-<div class="card"><div class="ico">💬</div><h3>Chat eszközökkel</h3><p>Kérdezz természetes nyelven; a Jarvis fájlokat olvas és szerkeszt, parancsokat futtat (engedéllyel), keres a weben és tervet vezet.</p></div>
-<div class="card"><div class="ico">🎤</div><h3>Hang</h3><p>Ébresztőszó, beszédfelismerés és felolvasás – mind helyben, a számítógépeden fut.</p></div>
-<div class="card"><div class="ico">📅</div><h3>Naptár és levelek</h3><p>Események, emlékeztetők, napi összefoglaló; értesítés az új Gmail-levelekről a Google Naptárral együtt.</p></div>
-<div class="card"><div class="ico">🏠</div><h3>Okosotthon</h3><p>A hálózatod tévéi, klímái, kapcsolói, kamerái és rádiói – egy chat- vagy hangutasításnyira!</p></div>
-<div class="card"><div class="ico">🖥️</div><h3>Több gép</h3><p>Párosítsd a gépeidet: a feladatok, projektek, memória és beszélgetések titkosított kapcsolaton követik az igényeidet.</p></div>
-<div class="card"><div class="ico">🧩</div><h3>Nyitott és bővíthető</h3><p>Bármilyen modell (helyi Ollama vagy felhős API), MCP-szerverek, rutinok és webes felület a telefonodra.</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></div><h3>Chat eszközökkel</h3><p>Kérdezz természetes nyelven; a Jarvis fájlokat olvas és szerkeszt, parancsokat futtat (engedéllyel), keres a weben és tervet vezet.</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h3>Hang</h3><p>Ébresztőszó, beszédfelismerés és felolvasás – mind helyben, a számítógépeden fut.</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Naptár és levelek</h3><p>Események, emlékeztetők, napi összefoglaló; értesítés az új Gmail-levelekről a Google Naptárral együtt.</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></div><h3>Okosotthon</h3><p>A hálózatod tévéi, klímái, kapcsolói, kamerái és rádiói – egy chat- vagy hangutasításnyira!</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="13" height="9" rx="1.5"/><rect x="10.5" y="9" width="11" height="9" rx="1.5"/></svg></div><h3>Több gép</h3><p>Párosítsd a gépeidet: a feladatok, projektek, memória és beszélgetések titkosított kapcsolaton követik az igényeidet.</p></div>
+<div class="card"><div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h3a2 2 0 1 1 4 0h3v5a2 2 0 1 0 0 4v5h-5a2 2 0 1 0-4 0H5v-5a2 2 0 1 1 0-4V4z"/></svg></div><h3>Nyitott és bővíthető</h3><p>Bármilyen modell (helyi Ollama vagy felhős API), MCP-szerverek, rutinok és webes felület a telefonodra.</p></div>
   </div>
 </div></section>
 
@@ -39,28 +41,28 @@
   <h2>A Jarvis letöltése</h2><p class="sub">Verzió: <b data-version>legfrissebb</b> – ingyenes, személyes használatra. Az app magától frissül.</p>
   <div class="dl">
     <div class="card" data-os="linux">
-      <div class="ico">🐧</div><h3>Linux</h3><span class="muted">AppImage (x86_64)</span>
+      <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M7 10l3 2.5L7 15M12.5 15H17"/></svg></div><h3>Linux</h3><span class="muted">AppImage (x86_64)</span>
       <small data-size></small>
       <small>Tedd futtathatóvá (<code>chmod +x</code>) és indítsd el. Az önfrissítés az AppImage-dzsel működik.</small>
       <a class="btn primary" data-kind="linux" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">AppImage letöltése</a>
     </div>
     <div class="card" data-os="windows">
-      <div class="ico">🪟</div><h3>Windows</h3><span class="muted">Telepítő (64 bites)</span>
+      <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l8-1.2v7.2H3zM12.5 4.1L21 3v8.5h-8.5zM3 12.5h8v7.2l-8-1.2zM12.5 12.5H21V21l-8.5-1.1z"/></svg></div><h3>Windows</h3><span class="muted">Telepítő (64 bites)</span>
       <small data-size></small>
       <small>A jelenlegi felhasználónak telepít, rendszergazdai jog nem kell.</small>
       <a class="btn primary" data-kind="windows" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Telepítő letöltése</a>
     </div>
     <div class="card" data-os="mac">
-      <div class="ico">🍎</div><h3>macOS</h3><span class="muted">App (.app.tar.gz)</span>
+      <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="1.5"/><path d="M2 19.5h20"/></svg></div><h3>macOS</h3><span class="muted">App (.app.tar.gz)</span>
       <small data-size></small>
-      <a class="btn primary" data-kind="mac-arm" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Apple silicon</a>
       <small>Gatekeeper: <code>xattr -dr com.apple.quarantine Jarvis.app</code></small>
+      <a class="btn primary" data-kind="mac-arm" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Apple silicon</a>
     </div>
   </div>
   <p class="note"><a href="https://github.com/KriszKecskes/jarvis-app/releases">Minden kiadás és a változásnapló</a><br>A Jarvis személyes, nem kereskedelmi projekt. A telepítők még nincsenek platformgyártói aláírással ellátva, ezért a Windows SmartScreen vagy a macOS Gatekeeper az első indításkor megerősítést kérhet.</p>
 </div></section>
 
-<section class="alt"><div class="wrap">
+<section class="alt priv"><div class="wrap">
   <h2>Az adatvédelem az első</h2><p class="muted" style="max-width:720px">Nincs Jarvis-szerver: a fejlesztő nem gyűjti, nem kapja és nem tárolja az adataidat. A Google-adatokat csak az általad kért naptár- és levélfunkciókhoz használja.</p>
   <p class="muted" style="max-width:720px">A felhasználó engedélyével a Jarvis a Google-fiókhoz kapcsolódik: a Google Naptár eseményeit mutatja, létrehozza és módosítja, a Gmailben pedig értesít az újonnan érkezett levelekről (csak metaadat: feladó, tárgy, dátum, címkék).</p>
   <p class="muted" style="max-width:720px"><b>A Google-integráció opcionális.</b> A Jarvis nélküle is teljes értékűen működik; a naptár- és levélfunkciókhoz van rá szükség. Használatához saját Google Cloud-projekt kell, benne egy OAuth-kliens (Client ID és Client secret), amelyet a Jarvis beállításaiban adsz meg. A Jarvisnak nincs központi alkalmazás-azonosítója és nincs szervere, ezért a hozzáférési tokenek kizárólag a te projektedhez és a te fiókodhoz tartoznak, és a gépeden, az operációs rendszer kulcstartójában maradnak.</p>
