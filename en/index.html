@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jarvis – your private desktop assistant</title>
+<meta name="description" content="Jarvis is a private, self-hosted desktop assistant for Linux, macOS and Windows: chat, voice, calendar, mail and your smart home – running on your own computers.">
+<meta property="og:title" content="Jarvis – your private desktop assistant"><meta property="og:description" content="Jarvis is a private, self-hosted desktop assistant for Linux, macOS and Windows: chat, voice, calendar, mail and your smart home – running on your own computers."><meta property="og:image" content="https://kriszkecskes.github.io/jarvis-site/img/mascot.png">
+<link rel="stylesheet" href="../style.css"><link rel="icon" href="../logo.png"></head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="../logo.png" alt="">Jarvis</a>
+  <nav><a class="hide-s" href="#features">Features</a><a href="#download">Download</a><a class="hide-s" href="../privacy.html">Privacy</a><a class="lang" href="../">Magyar</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <img class="mascot" src="../img/mascot.png" alt="">
+  <h1>Your assistant,<br><span>on your own computers.</span></h1>
+  <p class="lead">Jarvis answers by text or voice, manages your calendar, watches your mail and controls your home – and everything stays on your machines. No Jarvis cloud, no account.</p>
+  <div class="cta"><a class="btn primary" href="#download">Download</a><a class="btn" href="#features">See features</a></div>
+  <div class="shot"><img class="dark-only" src="../img/chat-dark.png" alt="Jarvis chat window" width="1120" height="780"><img class="light-only" src="../img/chat-light.png" alt="Jarvis chat window" width="1120" height="780"></div>
+</div></div>
+
+<section id="features"><div class="wrap">
+  <h2>Everything an assistant should do</h2><p class="sub">One app that talks, acts and remembers – with your keys and your data.</p>
+  <div class="grid">
+<div class="card"><div class="ico">💬</div><h3>Chat with tools</h3><p>Ask in plain language; Jarvis reads and edits files, runs commands (with your permission), searches the web and keeps plans.</p></div>
+<div class="card"><div class="ico">🎤</div><h3>Voice</h3><p>Wake word, speech recognition and spoken answers – all running locally on your computer.</p></div>
+<div class="card"><div class="ico">📅</div><h3>Calendar & mail</h3><p>Create events, get reminders and a daily briefing; new-mail notifications from Google Calendar and Gmail.</p></div>
+<div class="card"><div class="ico">🏠</div><h3>Smart home</h3><p>TVs, air conditioners, switches, cameras and radios on your network – by chat or by voice.</p></div>
+<div class="card"><div class="ico">🖥️</div><h3>More than one computer</h3><p>Pair your machines: tasks, projects, memory and conversations follow you between them, over encrypted connections.</p></div>
+<div class="card"><div class="ico">🧩</div><h3>Open & extensible</h3><p>Any model (local Ollama or a cloud API), MCP servers, routines and a web interface for your phone.</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+  <div><h2>Home, mail, calendar – one place</h2><p class="muted">Jarvis finds the devices on your network and lets you control them from the same chat. It runs on your desktop and is reachable from your phone through its own secure web interface.</p><ul class="checks"><li>Your keys stay in the system keyring</li><li>Data lives in a local database you own</li><li>Works with local or cloud language models</li></ul></div>
+  <div class="shot"><img class="dark-only" src="../img/google-dark.png" alt="Jarvis Google settings: calendar reminders and new-mail notifications" loading="lazy"><img class="light-only" src="../img/google-light.png" alt="Jarvis Google settings: calendar reminders and new-mail notifications" loading="lazy"></div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <h2>Download Jarvis</h2><p class="sub">Version <b data-version>latest</b> – free, for personal use. The app updates itself.</p>
+  <div class="dl">
+    <div class="card" data-os="linux">
+      <div class="ico">🐧</div><h3>Linux</h3><span class="muted">AppImage (x86_64)</span>
+      <small data-size></small>
+      <small>Make it executable (<code>chmod +x</code>) and run it. Self-update works with the AppImage.</small>
+      <a class="btn primary" data-kind="linux" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Download AppImage</a>
+    </div>
+    <div class="card" data-os="windows">
+      <div class="ico">🪟</div><h3>Windows</h3><span class="muted">Installer (64-bit)</span>
+      <small data-size></small>
+      <small>Installs for the current user, no administrator rights needed.</small>
+      <a class="btn primary" data-kind="windows" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Download installer</a>
+    </div>
+    <div class="card" data-os="mac">
+      <div class="ico">🍎</div><h3>macOS</h3><span class="muted">App (.app.tar.gz)</span>
+      <small data-size></small>
+      <a class="btn primary" data-kind="mac-arm" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Apple silicon</a>
+      <a class="muted" data-kind="mac-intel" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">Intel Mac</a>
+      <small>Gatekeeper: <code>xattr -dr com.apple.quarantine Jarvis.app</code></small>
+    </div>
+  </div>
+  <p class="note"><a href="https://github.com/KriszKecskes/jarvis-app/releases">All releases and release notes</a><br>Jarvis is a personal, non-commercial project. Installers are not yet signed by a platform vendor, so Windows SmartScreen or macOS Gatekeeper may ask for confirmation on first start.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <h2>Privacy first</h2><p class="muted" style="max-width:720px">There is no Jarvis server: the developer does not collect, receive or store your data. Google data is used only to provide the calendar and mail features you ask for.</p>
+  <p class="muted" style="max-width:720px">With the user's permission, Jarvis connects to their Google account to show, create and update events in Google Calendar and to notify about newly arrived email in Gmail (message metadata only: sender, subject, date, labels).</p>
+  <p><a class="btn" href="../privacy.html">Read the privacy policy</a></p>
+</div></section>
+
+<footer><div class="wrap"><span>Jarvis is a personal, non-commercial project and is not offered as a public service.</span><span>Contact: <a href="mailto:kecsk.krisztian@gmail.com">kecsk.krisztian@gmail.com</a></span></div></footer>
+<script src="../app.js"></script>
+</body></html>
