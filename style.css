@@ -53,7 +53,7 @@ code { font: 0.88em var(--mono); background: var(--panel-2); padding: 1px 6px; b
 .orb::before { inset: 0; background: repeating-radial-gradient(circle, transparent 0 22px, color-mix(in srgb, var(--accent) 38%, transparent) 22px 23px); -webkit-mask-image: radial-gradient(circle, #000 28%, transparent 70%); mask-image: radial-gradient(circle, #000 28%, transparent 70%); animation: ripple 7s linear infinite; }
 .orb::after { inset: 18%; background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent), transparent 68%); filter: blur(10px); }
 @keyframes ripple { from { transform: scale(0.9); opacity: 1; } to { transform: scale(1.12); opacity: 0.75; } }
-.hero .mascot { position: relative; z-index: 1; width: 58%; height: auto; aspect-ratio: 198 / 190; pointer-events: none; }
+.hero .mascot { position: relative; z-index: 1; width: 58%; transform: translate(8%, -5%); height: auto; aspect-ratio: 198 / 190; pointer-events: none; }
 .hero h1 { font: 700 clamp(40px, 7vw, 80px)/1.02 var(--serif); letter-spacing: -0.035em; margin: 0 0 20px; }
 .hero h1 span { display: inline-block; font-style: italic; font-weight: 600; color: var(--accent); padding-bottom: 0.08em;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='10' viewBox='0 0 120 10' preserveAspectRatio='none'%3E%3Cpath d='M1 6 Q15 1 30 5 T60 5 T90 5 T119 4' fill='none' stroke='%2338e1ff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") left bottom / 100% 0.12em no-repeat; }
