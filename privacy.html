@@ -9,11 +9,19 @@
   <nav><a href="index.html#download">Letöltés</a><a class="lang" href="en/privacy.html">English</a></nav>
 </div></header>
 <main class="doc">
-<h1>Adatvédelmi szabályzat</h1><p class="muted">Jarvis · Utolsó frissítés: 2026-11-11</p>
+<h1>Adatvédelmi szabályzat</h1><p class="muted">Jarvis · Utolsó frissítés: 2026-11-16</p>
 
 <h2>Áttekintés</h2>
 <p>A Jarvis személyes asztali asszisztens, amely teljes egészében a felhasználó saját eszközein fut. A fejlesztő nem
 üzemeltet Jarvis-szervert, és nem gyűjt, nem kap és nem tárol felhasználói adatokat.</p>
+
+<h2>A Google-integráció opcionális</h2>
+<p>A Google-fiók használata nem kötelező: a Jarvis a Google-kapcsolat nélkül is működik, csak a naptár- és
+levélfunkciók maradnak el. A bekapcsolásához a felhasználónak saját Google Cloud-projektet kell létrehoznia a
+Google Cloud Console-ban, beállítania az OAuth-hozzájárulási képernyőt, és létrehoznia egy OAuth-klienst; ennek
+Client ID-ját és Client secretjét a Jarvis beállításaiban adja meg. A Google API-hozzáférés így a felhasználó saját
+kliense és projektje alatt történik. A fejlesztő nem üzemeltet OAuth-klienst, és semmilyen módon nem fér hozzá a
+felhasználó tokenjeihez vagy Google-adataihoz.</p>
 
 <h2>Elért Google-felhasználói adatok</h2>
 <ul>
@@ -27,7 +35,7 @@ dátummal. A Jarvis nem tudja elolvasni a levelek törzsét és a mellékleteket
 <h2>Az adatok felhasználása és tárolása</h2>
 <ul>
 <li>Az adatokat csak a fenti funkciókhoz használja, a bejelentkezett felhasználó számára.</li>
-<li>Az OAuth-tokenek az operációs rendszer biztonságos kulcstartójában (vagy egy titkosított helyi fájlban) vannak a
+<li>Az OAuth-kliens adatai (Client ID, Client secret) és az OAuth-tokenek az operációs rendszer biztonságos kulcstartójában (vagy egy titkosított helyi fájlban) vannak a
 felhasználó saját eszközein. A felhasználó saját, párosított eszközei között titkosított (TLS) kapcsolaton át
 szinkronizálódhatnak.</li>
 <li>Ha a felhasználó a naptáráról vagy a leveleiről kérdez az asszisztenstől, az érintett esemény- vagy levél-metaadat

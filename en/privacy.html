@@ -9,11 +9,19 @@
   <nav><a href="index.html#download">Download</a><a class="lang" href="../privacy.html">Magyar</a></nav>
 </div></header>
 <main class="doc">
-<h1>Privacy Policy</h1><p class="muted">Jarvis · Last updated: 2026-11-11</p>
+<h1>Privacy Policy</h1><p class="muted">Jarvis · Last updated: 2026-11-16</p>
 
 <h2>Overview</h2>
 <p>Jarvis is a personal desktop assistant that runs entirely on the user's own devices. There is no Jarvis
 server operated by the developer, and the developer does not collect, receive or store any user data.</p>
+
+<h2>The Google integration is optional</h2>
+<p>Using a Google account is not required: Jarvis works without a Google connection, only the calendar and mail
+features are unavailable. To enable it, the user creates their own Google Cloud project in the Google Cloud
+Console, configures the OAuth consent screen and creates an OAuth client, then enters its Client ID and Client
+secret in Jarvis's settings. Access to the Google APIs therefore takes place under the user's own client and
+project. The developer does not operate an OAuth client and has no access whatsoever to the user's tokens or
+Google data.</p>
 
 <h2>Google user data accessed</h2>
 <ul>
@@ -26,7 +34,7 @@ subject and date. Jarvis cannot read message bodies or attachments.</li>
 <h2>How the data is used and stored</h2>
 <ul>
 <li>Data is used only to provide the features above to the user who signed in.</li>
-<li>OAuth tokens are stored in the operating system's secure keyring (or an encrypted local file) on the user's
+<li>The OAuth client credentials (Client ID, Client secret) and OAuth tokens are stored in the operating system's secure keyring (or an encrypted local file) on the user's
 own devices. They may be synchronized between the user's own paired devices over an encrypted (TLS)
 connection.</li>
 <li>When the user asks the assistant a question about their calendar or email, the relevant event or message
