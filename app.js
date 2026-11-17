@@ -3,7 +3,6 @@
 (() => {
   const REPO = "KriszKecskes/jarvis-app";
   const kinds = {
-    linux: /linux-x86_64\.AppImage$/i,
     windows: /windows-x86_64\.exe$|x64-setup\.exe$/i,
     "mac-arm": /darwin-aarch64\.app\.tar\.gz$/i,
   };

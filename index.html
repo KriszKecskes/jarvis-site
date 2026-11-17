@@ -2,7 +2,7 @@
 <html lang="hu" data-root="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jarvis – a saját asztali asszisztensed</title>
 <meta name="description" content="A Jarvis privát, saját gépen futó asztali asszisztens Linuxra, macOS-re és Windowsra: chat, hang, naptár, levelek és okosotthon – a te számítógépeiden.">
-<meta property="og:title" content="Jarvis – a saját asztali asszisztensed"><meta property="og:description" content="A Jarvis privát, saját gépen futó asztali asszisztens Linuxra, macOS-re és Windowsra: chat, hang, naptár, levelek és okosotthon – a te számítógépeiden."><meta property="og:image" content="https://kriszkecskes.github.io/jarvis-site/img/mascot.png">
+<meta property="og:title" content="Jarvis – a saját asztali asszisztensed"><meta property="og:description" content="A Jarvis privát, saját gépen futó asztali asszisztens Linuxra, macOS-re és Windowsra: chat, hang, naptár, levelek és okosotthon – a te számítógépeiden."><meta property="og:image" content="https://jarvisai.hu/img/mascot.png">
 <link rel="alternate" hreflang="en" href="en/"><link rel="alternate" hreflang="hu" href="./"><script src="lang.js"></script><link rel="stylesheet" href="style.css?v=fa027df"><link rel="icon" href="logo.png"></head>
 <body>
 <header class="top"><div class="wrap">
@@ -42,10 +42,9 @@
   <h2>A Jarvis letöltése</h2><p class="sub">Verzió: <b data-version>legfrissebb</b> – ingyenes, személyes használatra. Az app magától frissül.</p>
   <div class="dl">
     <div class="card" data-os="linux">
-      <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M7 10l3 2.5L7 15M12.5 15H17"/></svg></div><h3>Linux</h3><span class="muted">AppImage (x86_64)</span>
-      <small data-size></small>
-      <small>Tedd futtathatóvá (<code>chmod +x</code>) és indítsd el. Az önfrissítés az AppImage-dzsel működik.</small>
-      <a class="btn primary" data-kind="linux" href="https://github.com/KriszKecskes/jarvis-app/releases/latest">AppImage letöltése</a>
+      <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M7 10l3 2.5L7 15M12.5 15H17"/></svg></div><h3>Linux</h3><span class="muted">Flatpak (x86_64)</span>
+      <small>Egy paranccsal telepíthető, a szoftverközpont és a <code>flatpak update</code> frissíti: <code>flatpak install --user https://flatpak.jarvisai.hu/hu.jarvis.app.flatpakref</code></small>
+      <a class="btn primary" href="https://flatpak.jarvisai.hu/hu.jarvis.app.flatpakref">Flatpak-fájl letöltése</a>
     </div>
     <div class="card" data-os="windows">
       <div class="ico"><svg class="gl" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l8-1.2v7.2H3zM12.5 4.1L21 3v8.5h-8.5zM3 12.5h8v7.2l-8-1.2zM12.5 12.5H21V21l-8.5-1.1z"/></svg></div><h3>Windows</h3><span class="muted">Telepítő (64 bites)</span>
@@ -71,5 +70,5 @@
 </div></section>
 
 <footer><div class="wrap"><span>A Jarvis személyes, nem kereskedelmi projekt, nem nyilvános szolgáltatás.</span><span>Kapcsolat: <a href="mailto:kecsk.krisztian@gmail.com">kecsk.krisztian@gmail.com</a></span></div></footer>
-<script src="app.js?v=fa027df"></script>
+<script src="app.js?v=flatpak1"></script>
 </body></html>
