@@ -101,6 +101,14 @@ section .sub { color: var(--muted); max-width: 520px; margin: 0 0 32px; }
 .split { display: grid; gap: 56px; align-items: center; grid-template-columns: 1fr 1.05fr; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 40px; } }
 .split .shot { margin: 0; box-shadow: -10px 10px 0 var(--panel-2); }
+/* a tévés szekció: a kép balra (a fölötte lévő szekció fordítottja), a tévé képe mindig sötét */
+.split.tv { grid-template-columns: 1.05fr 1fr; }
+/* tévé, nem ablak: vékony sötét káva (a kép maga is sötét, a téma nem változtat rajta) és alul kis talp */
+.split.tv .shot { overflow: visible; border: 6px solid #05070d; border-radius: 12px; background: #05070d; box-shadow: 10px 10px 0 var(--panel-2); margin-bottom: 26px; }
+.split.tv .shot::before { display: none; }
+.split.tv .shot::after { content: ""; position: absolute; left: 50%; bottom: -24px; width: 22%; height: 18px; transform: translateX(-50%); border-radius: 0 0 8px 8px; background: linear-gradient(var(--ink), color-mix(in srgb, var(--ink) 70%, transparent)); opacity: 0.85; }
+.split.tv .shot img { display: block; width: 100%; height: auto; border-radius: 6px; }
+@media (max-width: 860px) { .split.tv { grid-template-columns: 1fr; } }
 .checks { list-style: none; padding: 0; margin: 20px 0 0; }
 .checks li { padding: 8px 0 8px 34px; position: relative; border-top: 1px dashed var(--line-2); }
 .checks li::before { content: "✓"; position: absolute; left: 0; top: 8px; width: 22px; height: 22px; display: grid; place-items: center; font: 700 12px var(--mono); color: var(--on-accent); background: var(--ok); border-radius: 6px; }
