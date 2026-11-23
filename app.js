@@ -5,6 +5,7 @@
   const kinds = {
     windows: /windows-x86_64\.exe$|x64-setup\.exe$/i,
     "mac-arm": /darwin-aarch64\.app\.tar\.gz$/i,
+    "android-tv": /android-tv\.apk$/i,
   };
   const ua = navigator.userAgent;
   const mine = /Windows/.test(ua) ? "windows" : /Mac/.test(ua) ? "mac-arm" : /Linux/.test(ua) && !/Android/.test(ua) ? "linux" : "";
